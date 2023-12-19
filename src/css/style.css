@@ -9,10 +9,15 @@ body {
   height: 100%;
 }
 
+.container {
+  width: 1440px;
+  height: 696px;
+}
+
 .home-link {
   font-size: 50px;
 }
-.home-link:hover{
+.home-link:hover {
   color: coral;
   text-decoration: underline;
 }
@@ -37,6 +42,7 @@ body {
 }
 
 .feedback-form {
+  /* font-family: Montserrat; */
   display: inline-flex;
   padding: 24px;
   flex-direction: column;
@@ -45,6 +51,16 @@ body {
   border-radius: 8px;
   /* background: #dca7f8; */
   background: #fff;
+}
+.form-text {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  padding-bottom: 15px;
 }
 .label-form {
   /* color: #2e2f42;
@@ -71,6 +87,7 @@ body {
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #808080;
+  padding: 10px;
 }
 
 .label-form input:hover {
@@ -84,6 +101,7 @@ body {
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid #808080;
+  padding: 10px;
 }
 
 .label-form textarea:hover {

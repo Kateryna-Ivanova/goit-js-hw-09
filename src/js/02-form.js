@@ -6,30 +6,37 @@ form.addEventListener('input',onInputData);
 
 shouData();
 
-const onFormData = {};
-function onInputData(evt) {
-  onFormData[evt.target.name] = evt.target.value.trim();
-  localStorage.setItem(KEY_FORM_INPUT, JSON.stringify(onFormData));
+const onFormData = {
+  email: "",
+  message:"",
+};
+function onInputData() {
+  onFormData.email = form.elements.email.value.trim();
+    onFormData.message = form.elements.message.value.trim();
+    localStorage.setItem(KEY_FORM_INPUT, JSON.stringify(onFormData))
 }
+
 
 function shouData() {
   let dataForm = JSON.parse(localStorage.getItem(KEY_FORM_INPUT));
-  if (dataForm) {
-    const {elements: { email, message },} = form;
-    email.value = dataForm.email;
-    message.value = dataForm.message;
+    if (dataForm) {
+      
+    form.elements.email.value = dataForm.email;
+    form.elements.message.value = dataForm.message;
   }
 }
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  const {elements: { email, message },} = evt.currentTarget;
-
-  if (email.value.trim() === '' || message.value.trim() === '') {
+  if (evt.currentTarget.elements.email.value === '' ||
+    evt.currentTarget.elements.message.value === '')
     return alert('Заповніть всі поля');
-  }
   
-  console.log({ email: email.value.trim(), message: message.value.trim() });
+  
+    console.log({
+        email: evt.currentTarget.elements.email.value,
+        message: evt.currentTarget.elements.message.value,
+    });
 
   evt.currentTarget.reset();
   localStorage.removeItem(KEY_FORM_INPUT);
