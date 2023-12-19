@@ -12,6 +12,7 @@ body {
 .container {
   width: 1440px;
   height: 696px;
+  margin: 0 auto;
 }
 
 .home-link {
