@@ -1,4 +1,6 @@
 // ПОЯСНЕННЯ , ПРИМІТКИ
+
+// Cпосіб з використанням деструктизації
 const form = document.querySelector('.feedback-form');
 const INPUT_KEY = 'feedback-form-state';
 
@@ -71,7 +73,7 @@ function onFormSubmit(evt) {
 
 
 
-
+// Cпосіб без деструктизації
 
 // const form = document.querySelector('.feedback-form');
 // const KEY_FORM_INPUT = 'feedback-form-state';
